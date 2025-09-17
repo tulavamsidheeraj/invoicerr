@@ -4,8 +4,8 @@ import '../index.css'
 export const RootLayout = () => {
    const currentYear = new Date().getFullYear();
   return (
-    <div className=''>
-      <header className='bg-gradient-to-r from-gray-950 from-10% via-gray-900 via-30% to-slate-950 to-90%'>
+    <div className='bg-gradient-to-r from-gray-950 from-10% via-gray-900 via-30% to-slate-950 to-90% text-white'>
+      <header className=''>
         <div className=''>
       <div className='flex justify-between font-semibold'>
         <div className='bitcount-grid-double-title text-3xl text-white p-7'>
@@ -31,7 +31,7 @@ export const RootLayout = () => {
       <main className='flex-grow'>  
         <Outlet />
       </main>
-      <footer className="bg-gradient-to-r from-gray-950 from-10% via-gray-900 via-30% to-slate-950 to-90% text-white py-10 px-4 mt-auto">
+      <footer className="text-white py-10 px-4 mt-auto">
         <div className="container mx-auto flex flex-wrap justify-around">
           {/* About Section */}
           <div className="w-full md:w-1/3 mb-6 md:mb-0">
