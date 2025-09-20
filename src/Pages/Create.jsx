@@ -1,10 +1,12 @@
 import SideBar from "../Components/SideBar";
 import Details from "../Components/Details";
+import Recipt from "../Components/Recipt";
+import SubTopBar from "../Components/SubTopBar";
 const Create = () => {
   return (
     <div>
-        <div>
-            Sub Top Bar
+        <div className="mx-7">
+            <SubTopBar/>
         </div>
         <div className='flex min-h-svh'>
             <div className='max-w-1/8 h-screen'>
@@ -14,7 +16,7 @@ const Create = () => {
                 <Details/>
             </div>
             <div className="flex-1">
-                see the recipt
+                <Recipt/>
             </div>
         </div>
     </div>
