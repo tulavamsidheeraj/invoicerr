@@ -1,36 +1,11 @@
-import React, { useState } from 'react';
+
 import BOM from './BOM';
 
-const Details = () => {
-
-    const [openPanel, setOpenPanel] = useState('company');
-    const [companyDetails, setCompanyDetails] = useState({
-        logo: null,
-        signature: null,
-        name: null,
-        address: null,
-    });
+const Details = ({openPanel,setOpenPanel,companyDetails,setCompanyDetails,clientDetails,setClientDetails, additionalInfo, setAdditionalInfo,invoiceDetails,setInvoiceDetails,items, setItems}) => {
 
     const togglePanel = (panelName) => {
     setOpenPanel(openPanel === panelName ? null : panelName);
     };
-    const [clientDetails, setClientDetails] = useState({
-      name: null,
-      address: null,
-    });
-
-    const [additionalInfo,setAdditionalInfo]=useState({
-        notes:null,
-        terms:null
-    })
-
-    const [invoiceDetails, setInvoiceDetails] = useState({
-      billNumber: null,
-      currency: null,
-      date: null,
-    });
-
-    const [items, setItems] = useState([]);
 
     const handleTextChange = (e, setState) => {
       const { name, value } = e.target;
@@ -211,7 +186,7 @@ const Details = () => {
         <div className="border-b border-gray-200 overflow-hidden mx-1">
           <AccordionHeader title="Invoice Items" panelName="items" />
           {openPanel === 'items' && (
-            <div className='p-6 '>
+            <div className='p-6'>
               {items.map((item, index) => (
                 <div key={index} className='flex items-center justify-between p-4 mb-2 border rounded-lg shadow-sm'>
                   <div className='flex items-center space-x-4'>
@@ -250,8 +225,7 @@ const Details = () => {
           )}
         </div>
 
-        {/* Additinal Information */}
-          
+        {/* Additinal Information */}          
         <div className="border-b border-gray-200 overflow-hidden mx-1">
           <AccordionHeader title="Additional Information" panelName="additionalInfo" />
           {openPanel === 'additionalInfo' && (

@@ -23,7 +23,7 @@ export const RootLayout = () => {
           </Link>
         </div>
       </div>
-      <div className='px-7 text-white'>
+      <div className='px-7 py-2 text-white'>
         <hr />
       </div>
     </div>

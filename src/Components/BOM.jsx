@@ -27,7 +27,8 @@ const BOM = ({ items, setItems }) => {
   };
 
   return (
-    <div className='flex items-end'>
+    <div>
+    <div className='flex items-end flex-wrap'>
       <div className='m-1'>
         <div>Item name</div>
         <input 
@@ -60,12 +61,13 @@ const BOM = ({ items, setItems }) => {
           placeholder='e.g., 1' 
         />
       </div>
-      <div className='m-1'>
+    </div>
+    <div className='m-1'>
         <button 
           className='border bg-indigo-400 p-2 rounded text-white' 
           onClick={handleAddItem}
         >
-          +
+          Add Item
         </button>
       </div>
     </div>
