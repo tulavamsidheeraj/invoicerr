@@ -1,35 +1,43 @@
-import React from 'react'
+import { forwardRef } from "react"
 
-const Recipt = ({companyDetails,clientDetails,additionalInfo,invoiceDetails,items}) => {
+const Recipt = forwardRef(({companyDetails,clientDetails,additionalInfo,invoiceDetails,items},ref) => {
   return (
-    <div className='bg-white m-2 text-black h-full flex flex-col p-2'>
-      <h1 className='text-2xl p-2'>
+    <div className='bg-white text-black h-full flex flex-col' ref={ref}>
+      <h1 className='text-2xl p-2 pb-7'>
         Invoice - {invoiceDetails.billNumber}
       </h1>
       <hr />
-      <div className='flex border-y justify-between h-20'>
-        <div className='border-r w-7/16 pl-1'>
-          <div className='text-lg font-light underline'>
-            Billed by
-          </div>
-          <div className='font-medium'>{clientDetails.name}</div>
-          <div>{clientDetails.address}</div>
-        </div>
-        <div className='border-r w-7/16 pl-1'>
+      <div className='flex border justify-between'>
+        <div className='w-7/16 pl-1 border'>
           <div className='text-lg font-light underline'>
             Billed to
           </div>
-          <div className='font-medium'>{companyDetails.name}</div>
-          <div>{companyDetails.address}</div>
+          <div className='font-medium'>
+            {clientDetails.name}
+          </div>
+          <div className="">
+            {clientDetails.address}
+          </div>
         </div>
-        <div className='border-r w-1/8'>
+        <div className=' w-7/16 pl-1 pb-2 border'>
+          <div className='text-lg font-light underline'>
+            Billed by
+          </div>
+          <div className='font-medium'>
+            {companyDetails.name}
+          </div>
+          <div>
+            {companyDetails.address}
+          </div>
+        </div>
+        <div className='w-1/8 border'>
           <img className='h-19 p-0.5' src={companyDetails.logo} alt="" />
         </div>
       </div>
       <div className='border-b py-2 '>
         Billed On : <span className='font-medium'>{invoiceDetails.date}</span>
       </div>
-      <div className='grid grid-cols-8 text-lg font-light border-b p-1'>
+      <div className='grid grid-cols-8 text-lg font-medium border-b p-1'>
         <div className='col-span-1'>
           S No
         </div>
@@ -85,7 +93,7 @@ const Recipt = ({companyDetails,clientDetails,additionalInfo,invoiceDetails,item
           </div>
 
         </div>
-        <div className='flex justify-between border-y h-auto'>
+        <div className='flex justify-between border-y  h-auto '>
           <div className='border-r w-4/5'>
             <div>
               <div className='text-lg font-light'>
@@ -104,14 +112,13 @@ const Recipt = ({companyDetails,clientDetails,additionalInfo,invoiceDetails,item
               </div>
             </div>
           </div>
-          <div>
-            <img src={companyDetails.signature} alt="" />
+          <div className="max-w-1/5">
+            <img src={companyDetails.signature} alt="" className="object-contain w-full min-h-0"/>
           </div>
         </div>
       </div>
     </div>
-
   )
-}
+})
 
 export default Recipt

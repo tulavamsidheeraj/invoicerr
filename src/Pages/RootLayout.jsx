@@ -9,16 +9,16 @@ export const RootLayout = () => {
         <div className=''>
       <div className='flex justify-between font-semibold'>
         <div className='bitcount-grid-double-title text-3xl text-white p-7'>
-          Invoicerrr...
+          <Link to="/" className=''>Invoicerrr...</Link>
         </div>
         <div className='flex justify-end'>
           <Link to="/about" className='p-7 text-xl md:text-2xl bitcount-grid-double-title text-white'>
             About
           </Link>
-          <Link to='/' className='p-7 text-xl md:text-2xl bitcount-grid-double-title text-white'>
+          <Link to='https://x.com/lazyknight45' className='p-7 text-xl md:text-2xl bitcount-grid-double-title text-white'>
             Contact me
           </Link>
-          <Link to="/" className='p-7 text-xl md:text-2xl bitcount-grid-double-title text-white'>
+          <Link to="https://github.com/tulavamsidheeraj/invoicerr"  rel="noopener noreferrer" className='p-7 text-xl md:text-2xl bitcount-grid-double-title text-white'>
             Appreciate
           </Link>
         </div>
@@ -37,14 +37,14 @@ export const RootLayout = () => {
           <div className="w-full md:w-1/3 mb-6 md:mb-0">
           <h4 className="text-xl font-bold mb-4 border-b-2 border-gray-600 pb-2">About Us</h4>
           <p className="text-sm text-gray-400 leading-relaxed">
-            I am an engineer willing to learn anything to bild the solution we need..
+            I am an engineer ...
           </p>
           </div>
 
           {/* Quick Links Section */}
           <div className="w-full md:w-1/3 mb-6 md:mb-0">
           <h4 className="text-xl font-bold mb-4 border-b-2 border-gray-600 pb-2">Quick Links</h4>
-          <ul className="text-sm space-y-2">
+          <ul className="text-sm space-y-4">
             <li><a href="/about" className="hover:text-gray-400 transition-colors">About</a></li>
             <li><a href="/services" className="hover:text-gray-400 transition-colors">Services</a></li>
             <li><a href="/contact" className="hover:text-gray-400 transition-colors">Contact</a></li>
@@ -54,11 +54,11 @@ export const RootLayout = () => {
 
           {/* Social Media Section */}
           <div className="w-full md:w-1/3">
-          <h4 className="text-xl font-bold mb-4 border-b-2 border-gray-600 pb-2">Follow Us</h4>
-          <div className="flex space-x-4">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400 transition-colors">Facebook</a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400 transition-colors">Twitter</a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400 transition-colors">LinkedIn</a>
+          <h4 className="text-xl font-bold mb-4 border-b-2 border-gray-600 pb-2">Follow Me</h4>
+          <div className="flex space-x-8">
+            <a href="https://www.instagram.com/this.is.dheeraj/" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400 transition-colors">Instagram</a>
+            <a href="https://x.com/lazyknight45" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400 transition-colors">Twitter</a>
+            <a href="https://www.linkedin.com/in/vamsi-dheeraj-tula/" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400 transition-colors">Linked In</a>
           </div>
           </div>
         </div>

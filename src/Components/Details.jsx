@@ -62,10 +62,10 @@ const Details = ({openPanel,setOpenPanel,companyDetails,setCompanyDetails,client
                     type="file" 
                     name="logo"
                     onChange={handleFileChange} 
-                    className='mt-1 border rounded p-1'
+                    className='mt-1 border rounded p-1 text-sm text-stone-500 file:mr-5 file:py-1 file:px-3 file:border-[1px] file:text-sm file:font-medium file:bg-stone-5 file:text-stone-700 hover:file:cursor-pointer hover:file:bg-gray-50 hover:file:text-gray-700'
                   />
                   {companyDetails.logo && (
-                    <img src={companyDetails.logo} alt="Company Logo" className="mt-2 h-16 object-contain rounded" />
+                    <img src={companyDetails.logo} alt="Company Logo" className="mt-2 h-16 object-contain rounded " />
                   )}
                 </div>
                 <div className='flex flex-col'>
@@ -74,7 +74,7 @@ const Details = ({openPanel,setOpenPanel,companyDetails,setCompanyDetails,client
                     type="file" 
                     name="signature"
                     onChange={handleFileChange} 
-                    className='mt-1 border rounded p-1'
+                    className='mt-1 border rounded p-1 text-sm text-stone-500 file:mr-5 file:py-1 file:px-3 file:border-[1px] file:text-sm file:font-medium file:bg-stone-5 file:text-stone-700 hover:file:cursor-pointer hover:file:bg-gray-50 hover:file:text-gray-700'
                   />
                   {companyDetails.signature && (
                     <img src={companyDetails.signature} alt="Company Signature" className="mt-2 h-16 object-contain rounded" />
