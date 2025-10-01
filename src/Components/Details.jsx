@@ -204,7 +204,7 @@ const Details = ({openPanel,setOpenPanel,companyDetails,setCompanyDetails,client
                   </div>
                   <div className='flex items-center space-x-4'>
                     <div className='font-bold text-gray-700'>
-                      ${(item.itemCost * item.itemQty).toFixed(2)}
+                      {(item.itemCost * item.itemQty).toFixed(2)}
                     </div>
                     <button 
                       onClick={() => handleDeleteItem(index)}
